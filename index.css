@@ -5,14 +5,21 @@
     box-sizing:border-box ;
   }
   body{
-      display: grid;
-      grid-template-columns: auto auto auto auto;
-      align-items: center;
       background:#050801;
+
   }
-  .cyan {
-      position:relative ;
-      display:inline-block ;
+  
+  .row1 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+  }
+
+  .cyan, .blue, .purple, .lime, .orange, .chaanakam, .pink, .yellow, .magenta, .red {
+    position:relative ;
+    display:flex;
+    align-items: center;
+    justify-content: center;
       padding:25px 30px;
       margin:40px 0;
       color:#03e9f4;
@@ -29,16 +36,7 @@
   }
 
   .blue {
-    position:relative ;
-    display:inline-block ;
-    padding:25px 30px;
-    margin:40px 0;
     color:#0062ff;
-    font-size:24px;
-    text-decoration:none;
-    text-transform:uppercase;
-    transition:0.5s;
-    letter-spacing:4px;
 }
  .blue:hover{
     background:#0062ff;
@@ -47,16 +45,7 @@
 }
 
 .purple {
-    position:relative ;
-    display:inline-block ;
-    padding:25px 30px;
-    margin:40px 0;
     color:#9900ff;
-    font-size:24px;
-    text-decoration:none;
-    text-transform:uppercase;
-    transition:0.5s;
-    letter-spacing:4px;
 }
  .purple:hover{
     background:#9900ff;
@@ -65,16 +54,8 @@
 }
 
   .orange {
-    position:relative ;
-    display:inline-block ;
-    padding:25px 30px;
-    margin:40px 0;
     color:#ff6600;
-    font-size:24px;
-    text-decoration:none;
-    text-transform:uppercase;
-    transition:0.5s;
-    letter-spacing:4px;
+
 }
  .orange:hover{
     background:#ff6600;
@@ -83,16 +64,7 @@
 }
 
 .lime {
-    position:relative ;
-    display:inline-block ;
-    padding:25px 30px;
-    margin:40px 0;
     color:#39ff14;
-    font-size:24px;
-    text-decoration:none;
-    text-transform:uppercase;
-    transition:0.5s;
-    letter-spacing:4px;
 }
  .lime:hover{
     background:#39ff14;
@@ -101,16 +73,8 @@
 }
   
   .chaanakam {
-      position:relative ;
-      display:inline-block ;
-      padding:25px 30px;
-      margin:40px 0;
       color:#106200;
-      font-size:24px;
-      text-decoration:none;
-      text-transform:uppercase;
-      transition:0.5s;
-      letter-spacing:4px;
+
   }
    .chaanakam:hover{
       background:#106200;
@@ -119,16 +83,7 @@
   }
   
   .pink {
-      position:relative ;
-      display:inline-block ;
-      padding:25px 30px;
-      margin:40px 0;
       color:#ff6ec7;
-      font-size:24px;
-      text-decoration:none;
-      text-transform:uppercase;
-      transition:0.5s;
-      letter-spacing:4px;
   }
    .pink:hover{
       background:#ff6ec7;
@@ -137,16 +92,7 @@
   }
 
   .yellow {
-    position:relative ;
-    display:inline-block ;
-    padding:25px 30px;
-    margin:40px 0;
     color:#ffff00;
-    font-size:24px;
-    text-decoration:none;
-    text-transform:uppercase;
-    transition:0.5s;
-    letter-spacing:4px;
 }
  .yellow:hover{
     background:#ffff00;
@@ -155,16 +101,7 @@
 }
 
 .red {
-    position:relative ;
-    display:inline-block ;
-    padding:25px 30px;
-    margin:40px 0;
     color:#f21a1d;
-    font-size:24px;
-    text-decoration:none;
-    text-transform:uppercase;
-    transition:0.5s;
-    letter-spacing:4px;
 }
  .red:hover{
     background:#f21a1d;
@@ -173,19 +110,30 @@
 }
 
 .magenta {
-    position:relative ;
-    display:inline-block ;
-    padding:25px 30px;
-    margin:40px 0;
     color:#ff1493;
-    font-size:24px;
-    text-decoration:none;
-    text-transform:uppercase;
-    transition:0.5s;
-    letter-spacing:4px;
 }
  .magenta:hover{
     background:#ff1493;
     color:#050801;
     box-shadow:0 0 5px#ff1493,0 0 25px#ff1493,0 0 50px#ff1493,0 0 200px#ff1493;
+}
+
+
+
+  @media screen and (max-width: 992px) {
+    .row1 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .cyan, .blue, .purple, .lime, .orange, .chaanakam, .pink, .yellow, .magenta, .red {
+          font-size: 3rem;
+      }
+}
+  
+@media screen and (max-width: 600px) {
+    .row1 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .cyan, .blue, .purple, .lime, .orange, .chaanakam, .pink, .yellow, .magenta, .red {
+        font-size: 2rem;
+    }
 }
